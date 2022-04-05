@@ -46,7 +46,7 @@ Read-Host "Please VERIFY the search results above. Press Enter to soft delete th
 
 
 ##Deleting the email
-
+##Change the purge type between Soft and Hard. Hard purge is unrecoverable.
 New-ComplianceSearchAction -SearchName $Name -Purge -PurgeType SoftDelete -Confirm:$False | Out-Null
 
 While((Get-ComplianceSearchAction $Name2).Status -ne "Completed"){
